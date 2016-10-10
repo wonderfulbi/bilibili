@@ -632,7 +632,7 @@
                     <ul class="sidebar-list">
                     @foreach($typeList as $type)
 
-                        <a href="#{{ $type->id }}"><li draggable="true" id="list{{ $type->id }}">{{ $type->name }}</li></a>
+                        <a class="liebiao" href="#{{ $type->id }}"><li draggable="true" id="list{{ $type->id }}">{{ $type->name }}</li></a>
 
                     @endforeach
                         <li class="sort">排序</li>
