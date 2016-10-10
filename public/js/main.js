@@ -28,6 +28,10 @@ $(document).ready(function() {
         backToTop(0);
     });
 
+    $(".sidebar-list li").click(function(e){
+        dingwei($(this));
+    })
+
     //显示全屏遮罩与排序拖拽功能
     $(".sort").click(function() {
         showMainMaskAndDragTip();
@@ -54,6 +58,8 @@ function init() {
     asideAnimationCtrl();
     //根据当前视口最上方的部分，确定右边栏列表自动切换选中状态
     scrollToAsideList();
+    //右边栏选中时当前视口自动定位
+    // dingewei();
     //设置sidebar侧边栏的位置
     resetSidebar();
 }
@@ -202,7 +208,7 @@ function finishNameChange() {
 //新番列表切换
 function animationEveryDay(today) {
     var index = $(".weekDay").index(today);
-    
+
     $(".weekDay-active").removeClass('weekDay-show');
     today.parent().find(".weekDay-active").addClass('weekDay-show');
     $(".list-box").css({
@@ -217,25 +223,25 @@ function animationEveryDay(today) {
 }
 //拖拽功能
 //该功能待完善
-function dragItems(ele) {
-    ele.onselectstart = function() {
-        return false;
-    };
-    ele.ondragstart = function(e) {
-        e.dataTransfer.effectAllowed = "move";
-        e.dataTransfer.setData("text", e.target.id);
-        e.dataTransfer.setDragImage(e.target, 0, 0);
-    };
-    ele.ondragover = function(e) {
-        e.preventDefault();
-        return true;
-    };
-    ele.ondrop = function(e) {
-        e.preventDefault();
-        e.dataTransfer.dropEffect = "move";
-        $(this).insertAfter('#' + e.dataTransfer.getData("text"));
-    };
-}
+// function dragItems(ele) {
+//     ele.onselectstart = function() {
+//         return false;
+//     };
+//     ele.ondragstart = function(e) {
+//         e.dataTransfer.effectAllowed = "move";
+//         e.dataTransfer.setData("text", e.target.id);
+//         e.dataTransfer.setDragImage(e.target, 0, 0);
+//     };
+//     ele.ondragover = function(e) {
+//         e.preventDefault();
+//         return true;
+//     };
+//     ele.ondrop = function(e) {
+//         e.preventDefault();
+//         e.dataTransfer.dropEffect = "move";
+//         $(this).insertAfter('#' + e.dataTransfer.getData("text"));
+//     };
+// }
 
 //根据本日是周几自动切换新番列表
 function animationEveryDayAuto() {
@@ -291,6 +297,15 @@ function scrollToAsideList() {
     });
 }
 
+//定位
+function dingwei(){
+    window.location.hash = list4;
+    // $("html,body").animate({
+    //         scrollTop: top
+    //     },
+    //     300);
+}
+
 //回到顶部功能
 function backToTop(top) {
     $("html,body").animate({
@@ -299,33 +314,34 @@ function backToTop(top) {
         300);
 }
 //显示全屏遮罩与拖拽提示
-function showMainMaskAndDragTip() {
-    $(".main-mask").show();
-    $(".sidebar").css({
-        backgroundColor: ' rgba(255,255,255,0.8)',
-    });
-    $(".dragtip").css({
-        opacity: '1',
-        visibility: 'visible'
-    });
-    $(".sidebar-list li").css('cursor', 'move');
-    var dragList = $(".sidebar-list li").not('.sort');
-    dragList.each(function(index, el) {
-        dragItems(el);
-    });
-}
-//取消全屏遮罩与拖拽提示
-function hideMainMaskAndDragTip() {
-    $(".main-mask").hide();
-    $(".sidebar").css({
-        backgroundColor: ' transparent',
-    });
-    $(".dragtip").css({
-        opacity: '0',
-        visibility: 'hidden'
-    });
-    $(".sidebar-list li").css('cursor', 'pointer');
-}
+// function showMainMaskAndDragTip() {
+//     $(".main-mask").show();
+//     $(".sidebar").css({
+//         backgroundColor: ' rgba(255,255,255,0.8)',
+//     });
+//     $(".dragtip").css({
+//         opacity: '1',
+//         visibility: 'visible'
+//     });
+//     $(".sidebar-list li").css('cursor', 'move');
+//     var dragList = $(".sidebar-list li").not('.sort');
+//     dragList.each(function(index, el) {
+//         dragItems(el);
+//     });
+// }
+// //取消全屏遮罩与拖拽提示
+// function hideMainMaskAndDragTip() {
+//     $(".main-mask").hide();
+//     $(".sidebar").css({
+//         backgroundColor: ' transparent',
+//     });
+//     $(".dragtip").css({
+//         opacity: '0',
+//         visibility: 'hidden'
+//     });
+//     $(".sidebar-list li").css('cursor', 'pointer');
+// }
+
 //设置sidebar侧边栏的位置
 function resetSidebar() {
     /*让我来解释一下……
@@ -333,7 +349,10 @@ function resetSidebar() {
      *因此这里采用javascript动态获取：侧边栏距离inner容器右边的距离
      *这样等于是把侧边栏的位置卡死，不会在响应式中发生布局异常
      */
-    var mainInnerWidthAndLeft = $(".main-inner").width() + $(".main-inner").offset().left;
+    // var mainInnerWidthAndLeft = $(".main-inner").width() + $(".main-inner").offset().left;
+    var mainInnerWidthAndLeft = document.body.clientWidth;
+    var mainInnerWidthAndTop = document.body.clientHeight;
 
-    $(".sidebar").css('left', mainInnerWidthAndLeft + 20);
+    $(".sidebar").css('left', mainInnerWidthAndLeft - 100);
+    $(".sidebar").css('top', mainInnerWidthAndTop - 450);
 }

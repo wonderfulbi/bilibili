@@ -515,6 +515,7 @@
                 </div>
             </div>
             @foreach($typeList as $type)
+                <a name="{{ $type->id }}"></a>
                 <div class="inner-section part{{ $type->id }} part-animate" id="part{{ $type->id+3 }}">
                     <div class="box-left">
                         <header class="part-animate-top">
@@ -631,7 +632,7 @@
                     <ul class="sidebar-list">
                     @foreach($typeList as $type)
 
-                        <li draggable="true" id="list{{ $type->id }}">{{ $type->name }}</li>
+                        <a href="#{{ $type->id }}"><li draggable="true" id="list{{ $type->id }}">{{ $type->name }}</li></a>
 
                     @endforeach
                         <li class="sort">排序</li>
