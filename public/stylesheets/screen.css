@@ -377,6 +377,15 @@ header.navbar {
   width: 60%;
   height: 60%;
   top: 40px; }
+.logo {
+    position: absolute;
+    width: 220px;
+    height: 105px;
+    left: 24px;
+    top: 25px;
+    background: transparent no-repeat left center;
+    z-index: 100
+}
   /* line 289, ../sass/screen.scss */
   .header-title-hoverbox:hover ~ .header-title {
     visibility: visible;
@@ -390,7 +399,7 @@ header.navbar {
   line-height: 20px;
   background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
-  left: 200px;
+  left: 300px;
   top: 100px;
   padding: 5px 20px;
   font-size: 14px;
