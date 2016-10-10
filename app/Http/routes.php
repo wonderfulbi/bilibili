@@ -11,8 +11,25 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('bilibili');
-// });
-
 Route::get('/',"modelController@index");
+
+
+Route::get("/admin",function(){
+    return view("admin.index.index");
+});
+
+Route::get("/admin/plate",function(){
+    return view("admin.plate.plate");
+});
+
+Route::get("/admin/addplate",function(){
+    return view("admin.plate.addplate");
+});
+
+Route::get("/admin/vedio",function(){
+    return view("admin.vedio.vedio");
+});
+
+Route::get("/admin/checkvedio",function(){
+    return view("admin.vedio.checkvedio");
+});

@@ -506,7 +506,7 @@
                             <div class="info">
                                 <h2>{{ $v->title }}</h2>
                                 <p>up主：{{ $v->uid }}</p>
-                                <p>播放：{{ $v->count }}</p>
+                                <p>播放：</p>
                             </div>
                         </li>
 
@@ -548,7 +548,7 @@
                                             </p>
                                             <p class="click-num">
                                                 <span class="play">
-                                                    {{ $v->count }}万
+                                                    万
                                                 </span>
                                                 <span class="barrage">
                                                     {{ $v->commentSum }}万
