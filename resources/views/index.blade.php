@@ -8,6 +8,7 @@
     <meta name="description" content="bilibili是国内知名的视频弹幕网站，这里有最及时的动漫新番，最棒的ACG氛围，最有创意的Up主。大家可以在这里找到许多欢乐。">
     <meta name="keywords" content="B站,弹幕,字幕,AMV,MAD,MTV,ANIME,动漫,动漫音乐,游戏,游戏解说,ACG,galgame,动画,番组,新番,初音,洛天依,vocaloid">
     <title>哔哩哔哩弹幕视频网 - ( ゜- ゜)つロ  乾杯~  - bilibili</title>
+    <link rel="shortcut icon" href="http://static.hdslb.com/images/favicon.ico">
     <link rel="stylesheet" href="stylesheets/screen.css">
 </head>
 
@@ -64,6 +65,11 @@
                     <a href="javascript:;">排行榜</a>
                 </div>
             </div>
+
+            <div class="header-title-hoverbox">
+                <a href="/" class="logo" style="background-image: url(&quot;http://i0.hdslb.com/bfs/archive/3e3d17f3a30f49ae1716a595fed12b621e19ab41.png&quot;);"></a>
+            </div>
+            <a class="header-title">拜年祭预告抢先看！</a>
             <nav class="kind-list">
                 <ul class="navlist-box">
                     <li class="home">
@@ -427,8 +433,6 @@
                     </li>
                 </ul>
             </nav>
-            <div class="header-title-hoverbox"></div>
-            <a class="header-title">拜年祭预告抢先看！</a>
         </div>
     </header>
     <!--主内容部分-->
@@ -565,19 +569,8 @@
                         <header class="part-animate-aside">
                             <ul>
                                 <h2>排行</h2>
-                                <li class="live-active live-change">
-                                    <a href="javascript:;">全部</a>
-                                </li>
-                                <li class="live-change">
-                                    <a href="javascript:;">原创</a>
-                                </li>
-                                <div class="date-change">
-                                    <span>三日</span>
-                                    <ul>
-                                        <li><a href="javascript:;">三日</a></li>
-                                        <li><a href="javascript:;">一周</a></li>
-                                    </ul>
-                                </div>
+
+
                             </ul>
                         </header>
                         <div class="carousel-animate-box">
