@@ -23,7 +23,7 @@
                     <!-- Fallback flash player for no-HTML5 browsers with JavaScript turned off -->
                     <object width="100%" height="100%" type="application/x-shockwave-flash" data="media/flashmediaelement.swf">
                             <param name="movie" value="media/flashmediaelement.swf" />
-                            <param name="flashvars" value="controls=true&amp;poster={{ URL('admins/img/media-player/media-player-poster.jpg') }}&amp;file={{ URL('admins/media/echohereweare.mp4') }}" />
+                            <param name="flashvars" value="controls=true&amp;poster={{ URL('admins/img/media-player/media-player-poster.jpg') }}&amp;file={{ URL('admins/media/xiaohuangren.mp4') }}" />
                             <!-- Image fall back for non-HTML5 browser with JavaScript turned off and no Flash player installed -->
                             <img src="{{ URL('admins/img/media-player/media-player-poster.jpg') }}" width="100%" height="100%" alt="Media" title="No video playback capabilities" />
                     </object>
