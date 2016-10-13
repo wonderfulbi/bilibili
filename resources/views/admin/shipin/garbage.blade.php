@@ -7,7 +7,7 @@
 @section('content')
 <!-- Table Hover -->
                 <div class="block-area" id="tableHover">
-                    <h3 class="block-title">您的位置->视频管理->视频列表</h3>
+                    <h3 class="block-title">您的位置->视频管理->回收站</h3>
                     <div class="table-responsive overflow">
                         <table class="table table-bordered table-hover tile">
                             <thead>
@@ -27,13 +27,10 @@
                                     <td>聂俊威 </td>
                                     <td>我是天才</td>
                                     <td>
-                                            <a href="">加入回收站 </a>
+                                            <a href="">还原 </a>
                                     </td>
                                     <td>
-                                        <a href="{{ URL('admin/checkvedio') }}">查看</a>|
-                                        <a href="">修改</a>|
-                                        <a href="">直接删除</a>
-
+                                        <a href="{{ URL('admin/checkvedio') }}">查看</a>
                                     </td>
                                 </tr>
                                <tr>

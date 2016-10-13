@@ -7,7 +7,7 @@
 @section('content')
    <!-- Table Hover -->
     <div class="block-area" id="tableHover">
-        <h3 class="block-title">您的位置->管理栏目->板块列表</h3>
+        <h3 class="block-title">您的位置->管理栏目->添加子版块</h3>
         <div class="table-responsive overflow">
             <table class="table table-bordered table-hover tile">
                 <thead>

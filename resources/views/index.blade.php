@@ -73,349 +73,27 @@
             <nav class="kind-list">
                 <ul class="navlist-box">
                     <li class="home">
-                        <a href="javascript:;">首页</a>
+                        <a href="/">首页</a>
                     </li>
-                    <li class="list-panel">
-                        <i>203</i>
-                        <a href="javascript:;">动画</a>
-                        <ul class="childlist-box">
-                            <li>
-                                <a href="javascript:;">MAD-AMV
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">MMD·3D
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">短片·手书·配信
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">综合
-                                    <em></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-panel">
-                        <i>50</i>
-                        <a href="javascript:;">番剧</a>
-                        <ul class="childlist-box">
-                            <li>
-                                <a href="javascript:;">连载动画
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">完结动画
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">资讯
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">官方延伸
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">国产动画
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">新番Index
-                                    <em></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-panel">
-                        <i>361</i>
-                        <a href="javascript:;">音乐</a>
-                        <ul class="childlist-box">
-                            <li>
-                                <a href="javascript:;">翻唱
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">VOCALOID·UTAU
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">演奏
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">三次元音乐
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">同人音乐
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">OP/ED/OST
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">音乐选集
-                                    <em></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-panel">
-                        <i>80</i>
-                        <a href="javascript:;">舞蹈</a>
-                        <ul class="childlist-box">
-                            <li>
-                                <a href="javascript:;">宅舞
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">三次元舞蹈
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">舞蹈教程
-                                    <em></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-panel">
-                        <i>999+</i>
-                        <a href="javascript:;">游戏</a>
-                        <ul class="childlist-box">
-                            <li>
-                                <a href="javascript:;">单机联机
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">网游·电竞
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">音游
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">Mugen
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">GMV
-                                    <em></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-panel">
-                        <i>233</i>
-                        <a href="javascript:;">科技</a>
-                        <ul class="childlist-box">
-                            <li>
-                                <a href="javascript:;">纪录片
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">趣味科普人文
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">野生技术协会
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">演讲·公开课
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">军事
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">数码
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">机械
-                                    <em></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-panel">
-                        <i>772</i>
-                        <a href="javascript:;">娱乐</a>
-                        <ul class="childlist-box">
-                            <li>
-                                <a href="javascript:;">搞笑
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">生活
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">美食圈
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">综艺
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">娱乐圈
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">Korea相关
-                                    <em></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-panel">
-                        <i>33</i>
-                        <a href="javascript:;">鬼畜</a>
-                        <ul class="childlist-box">
-                            <li>
-                                <a href="javascript:;">鬼畜调教
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">音MAD
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">人力VOCALOID
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">教程演示
-                                    <em></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-panel">
-                        <i>140</i>
-                        <a href="javascript:;">电影</a>
-                        <ul class="childlist-box">
-                            <li>
-                                <a href="javascript:;">电影相关
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">短片
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">欧美电影
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">日本电影
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">国产电影
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">其他国家
-                                    <em></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-panel">
-                        <i>228</i>
-                        <a href="javascript:;">电视剧</a>
-                        <ul class="childlist-box">
-                            <li>
-                                <a href="javascript:;">连载剧集
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">完结剧集
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">特设·布袋
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">电视剧相关
-                                    <em></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-panel">
-                        <i>38</i>
-                        <a href="javascript:;">时尚</a>
-                        <ul class="childlist-box">
-                            <li>
-                                <a href="javascript:;">美妆健身
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">服饰
-                                    <em></em>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">资讯
-                                    <em></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+                    @foreach($typeList as $type)
+                        <li class="list-panel">
+                            <i>203</i>
+                            <a href="{{ $type->link }}">{{ $type->name }}</a>
+                            <ul class="childlist-box">
+                            @foreach($tList as $tlist)
+                                @if($tlist->tid == $type->id)
+                                <li>
+                                    <a href="{{ $tlist->link }}">{{ $tlist->name }}
+                                        <em></em>
+                                    </a>
+                                </li>
+
+                                @endif
+                            @endforeach
+                            </ul>
+                        </li>
+                    @endforeach
+
                     <li class="list-panel">
                         <span></span>
 
@@ -443,31 +121,29 @@
             <div class="part1">
                 <div class="carousel">
                     <ul class="carousel-list">
-                        <li>
-                            <img src="http://i0.hdslb.com/u_user/fed83a4dfda6e755f0626a244ebafdd0.png" alt="" title="哔哩哔哩2016拜年祭 有抽奖哦">
-                        </li>
-                        <li>
-                            <img src="http://i1.hdslb.com/u_user/957506a10ef5732c4c96cb05728b0e66.jpg" alt="" title="新春贺岁">
-                        </li>
-                        <li>
-                            <img src="http://i2.hdslb.com/u_user/d8f502105953074778ddabbafbc96220.jpg" alt="" title="别人世界里的科学">
-                        </li>
-                        <li>
-                            <img src="http://i2.hdslb.com/u_user/a94186054c64144eaabfdb63b2c5d67f.jpg" alt="" title="和小电视一起环游世界吧～☆">
-                        </li>
-                        <li>
-                            <img src="http://i2.hdslb.com/promote/29b42120cefd9d0d734d01d0e309536d.jpg" alt="" title="物语轨迹">
-                        </li>
-                        <li>
-                            <img src="http://i0.hdslb.com/u_user/07d4ffba9f7dc64521d6631b28be9945.jpg" alt="" title="中文歌唱贼⑥的那些歪果仁">
-                        </li>
-                        <li>
-                            <img src="http://i1.hdslb.com/u_user/8b512d617dbe119ff38c4c04984688d5.jpg" alt="" title="Sugar Song and Bitter Step">
-                        </li>
+                        @foreach($lunbo as $lunList)
+                            <li>
+                                <a href="{{ $lunList->link }}">
+                                    <img src="{{ $lunList->image }}" alt="{{ $lunList->alt }}" title="{{ $lunList->title }}">
+                                </a>
+                            </li>
+                        @endforeach
                     </ul>
                     <nav class="carousel-ctrl">
                         <ul>
-                            <li class="active">
+
+                            @for($a = 1;$a<= count($lunbo);$a++)
+                                @if($a == 1)
+                                    <li class="active">
+                                        <a href=""></a>
+                                    </li>
+                                @else
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                @endif
+                            @endfor
+                            <!-- <li class="active">
                                 <a href=""></a>
                             </li>
                             <li>
@@ -487,14 +163,15 @@
                             </li>
                             <li>
                                 <a href=""></a>
-                            </li>
+                            </li> -->
                         </ul>
                         <span class="carousel-title"></span>
                     </nav>
                 </div>
+                <!-- 热门视频遍历 -->
                 <div class="indextop-video">
                     <ul class="indextop-video-listpanel">
-                        <li class="indextop-video-list">
+                        <!-- <li class="indextop-video-list">
                             <div class="mask"></div>
                             <div class="video-img"><img src="http://i0.hdslb.com/320_200/video/08/08a6a4bc9fe1679ffd6377f4ec8eb5e2.jpg" alt="test"></div>
                             <div class="info">
@@ -502,57 +179,63 @@
                                 <p>up主：祈Inory</p>
                                 <p>播放：33423</p>
                             </div>
-                        </li>
-                        @foreach($list as $v)
+                        </li> -->
+                        @foreach($hotList as $v)
                         <li class="indextop-video-list">
-                            <div class="mask"></div>
-                            <div class="video-img"><img src="images/" alt="test"></div>
-                            <div class="info">
-                                <h2>{{ $v->title }}</h2>
-                                <p>up主：{{ $v->uid }}</p>
-                                <p>播放：</p>
-                            </div>
+                            <a href="{{ $v->link }}">
+                                <div class="mask"></div>
+                                <div class="video-img"><img src="{{ $v->image }}" alt="test"></div>
+                                <div class="info">
+                                    <h2>【{{ $v->name }}】{{ $v->title }}</h2>
+                                    <p>up主：{{ $v->name }}</p>
+                                    <p>播放：{{ $v->count }}</p>
+                                </div>
+                            </a>
                         </li>
 
                         @endforeach
                     </ul>
                 </div>
             </div>
+            <!-- 分区遍历 -->
             @foreach($typeList as $type)
                 <a name="{{ $type->id }}"></a>
                 <div class="inner-section part{{ $type->id }} part-animate" id="part{{ $type->id+3 }}">
                     <div class="box-left">
                         <header class="part-animate-top">
-                            <h2><i></i>{{ $type->name }}</h2>
-                            <span class="animation-tab active">有新动态</span>
+                            <h2><i></i><a href="{{ $type->link }}">{{ $type->name }}</a></h2>
+                            <!-- <span class="animation-tab active">有新动态</span>
                             <span class="animation-tab">最新投稿</span>
-                            <span class="animation-tab">干物妹小埋异闻录！</span>
+                            <span class="animation-tab">干物妹小埋异闻录！</span> -->
                             <div class="btn-right">
                                 <div class="btn-reset">
                                     <a href="javascript:;"></a>
                                     <span><strong>2967</strong>条新动态</span>
                                 </div>
                                 <div class="btn-more">
-                                    <a href="javascript:;">更多</a>
+                                    <a href="{{ $type->link }}">更多</a>
                                 </div>
                             </div>
                         </header>
                         <div class="video-list">
                             <ul>
-                            @foreach($list as $v)
-                                @if($v->tid == $type->id)
+                            @foreach($list[$type->id-1] as $v)
+
                                     <li>
+
                                         <div class="image-box">
-                                            <img src="http://i1.hdslb.com/320_200/video/91/91d1eb7a147128f4f8f8f9be546c1562.jpg" alt="">
+                                            <a class="image-box" href="{{ $v->link }}">
+                                            <img src="{{ $v->image }}" alt="">
+                                            </a>
                                             <div class="video-time">60:00</div>
                                         </div>
-                                        <a class="image-title">
+                                        <a class="image-title" href="{{ $v->link }}">
                                             <p class="title">
                                                 {{ $v->title }}
                                             </p>
                                             <p class="click-num">
                                                 <span class="play">
-                                                    万
+                                                    {{ $v->count }}万
                                                 </span>
                                                 <span class="barrage">
                                                     {{ $v->commentSum }}万
@@ -560,7 +243,8 @@
                                             </p>
                                         </a>
                                     </li>
-                                @endif
+
+
                             @endforeach
                             </ul>
                         </div>
@@ -574,26 +258,38 @@
                             </ul>
                         </header>
                         <div class="carousel-animate-box">
+                            <span style="display:none;">{{$num=0}}</span>
                             <div class="rank-box">
                                 <ul>
-                                    <li>
-                                        <div class="rank">1</div>
-                                        <a href="javascript:;" class="rank-top">
-                                            <img src="http://i1.hdslb.com/320_200/video/81/813a22db0b3667a9307a2a113380e9bb.jpg" alt="">
-                                        </a>
-                                        <a href="javascript:;" class="rank-top-info">
-                                            <p class="rank-id">
-                                                <span class="rank-name">
-                                                   【六道笑点】四川方言版小埋02！？
-                                                </span>
-                                                <span class="rank-num">综合评分:23.4万</span>
-                                            </p>
-                                        </a>
-                                    </li>
+
+                                    @foreach($listP[$type->id-1] as $p)
+
+                                            <li>
+
+                                                <div class="rank">{{ $num+=1 }}</div>
+
+                                                <a href="{{ $p->link }}" class="rank-top">
+                                                @if($num==1)
+                                                    <img src="{{ $p->image }}" alt="">
+                                                @endif
+                                                </a>
+
+                                                <a href="{{ $p->link }}" class="rank-top-info">
+                                                    <p class="rank-id">
+                                                        <span class="rank-name">
+                                                          【{{ $p->name }}】 {{ $p->title }}
+                                                        </span>
+                                                        <span class="rank-num">{{ $p->count }}</span>
+                                                    </p>
+                                                </a>
+                                            </li>
+
+
+                                    @endforeach
 
                                 </ul>
                             </div>
-                            <div class="rank-box">
+                            <!-- <div class="rank-box">
                                 <ul>
                                     <li>
                                         <div class="rank">1</div>
@@ -611,13 +307,167 @@
                                     </li>
 
                                 </ul>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="checkmore">
                             <span>查看更多</span>
                         </div>
                     </aside>
                 </div>
+                @if($type->name == "番剧")
+                    <!--第五部分-2————番剧更新列表-->
+                    <div class="part-animate-list">
+                                        <div class="list-left">
+                                            <header>
+                                                <ul>
+                                                    @for($i = 0;$i<=6;$i++)
+                                                        <li class="list-controller" id="day{{ $i }}">
+                                                            <div class="weekDay-active">
+                                                                <i class="icon"></i>
+                                                                <span>周{{ $arr[$i] }}</span>
+                                                            </div>
+                                                            <span class="weekDay">{{ $arr[$i] }}</span>
+                                                        </li>
+                                                    @endfor
+
+                                                </ul>
+                                                <a href="javascript:;" class="list-btn">
+                                                    <span>新番放送表</span>
+                                                </a>
+                                            </header>
+                                            @for($j = 1;$j<=7;$j++)
+                                                <div class="list-box-{{ $j }} list-box">
+                                                    <ul>
+                                                        @foreach($vList as $vlist)
+                                                            @if($vlist->week == $j)
+                                                                <li>
+                                                                    <div class="img-box">
+                                                                        <a href="{{ $vlist->link }}">
+                                                                        <img src="{{ $vlist->image }}" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                    <span class="title"><a href="{{ $vlist->link }}">{{ $vlist->title }}</a></span>
+                                                                    <span class="episodes">更新至<i>4话</i></span>
+                                                                </li>
+                                                            @endif
+                                                        @endforeach
+
+                                                    </ul>
+                                                </div>
+                                            @endfor
+                                        </div>
+                                        <aside>
+                                            <div class="carousel-box">
+                                                <ul class="carousel-panel">
+                                                    @foreach($vList as $vlist)
+                                                        @if($vlist->top == 1)
+                                                        <li class="carousel-img">
+                                                            <a href="{{ $vlist->link }}">
+                                                                <img src="{{ $vlist->image }}" alt="">
+                                                            </a>
+                                                        </li>
+                                                        @endif
+                                                    @endforeach
+                                                    <!-- <li class="carousel-img">
+                                                        <a href="q">
+                                                        <img src="http://i0.hdslb.com/u_user/9b79d30420b9f32c31785de7f7518cde.jpg" alt=""></a>
+                                                    </li>
+                                                    <li class="carousel-img">
+                                                        <a href="q">
+                                                        <img src="http://i2.hdslb.com/u_user/046ccd23b5e1b0e0d82e7a02936ac981.jpg" alt=""></a>
+                                                    </li>
+                                                    <li class="carousel-img">
+                                                        <a href="q">
+                                                        <img src="http://i2.hdslb.com/u_user/eba3ff2c512a39a67f57005d01981033.jpg" alt=""></a>
+                                                    </li> -->
+                                                </ul>
+
+                                                <!-- 固定推荐三部已完结番剧 -->
+                                                <div class="carousel-box-ctrl">
+
+                                                    <ul>
+                                                    <!-- <span style="display:none;">{{$num=1}}</span> -->
+                                                        @foreach($vList as $vlist)
+                                                            @if($vlist->tid == $type->id && $vlist->week != 0 && $vlist->top == 1)
+                                                                @if($num == 1)
+                                                                   <li data-name="{{ $vlist->title }}" data-index="0" class="active">
+                                                        </li>
+                                                                @else
+                                                                    <li data-name="{{ $vlist->title }}" data-index="{{ $num-1 }}">
+                                                        </li>
+                                                                @endif
+                                                                    <span style="display:none;">{{$num++}}</span>
+                                                            @endif
+                                                        @endforeach
+                                                        <span style="display:none;">{{$num=0}}</span>
+                                                        <!-- <li data-name="混沌武士" data-index="0" class="active">
+                                                        </li>
+                                                        <li data-name="老虎和兔子" data-index="1">
+                                                        </li>
+                                                        <li data-name="隐王" data-index="2">
+                                                        </li> -->
+                                                    </ul>
+
+                                                    <span class="animate-name">
+                                                        {{ $vList[0]->title }}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="finish-list">
+                                                <ul>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- 随即推荐四部已完结番剧 -->
+                                            <div class="other-finish">
+                                                <ul>
+                                                    @foreach($overList[$type->id-1] as $overlist)
+
+                                                       <li>
+                                                            <div class="preview">
+                                                                <img src="/images/c6f7339ea957882229dc4d3ac8a8cec3.jpg" alt="">
+                                                                <p>全25话</p>
+                                                            </div>
+                                                            <a href="javascript:;">{{ $overlist->title }}</a>
+                                                        </li>
+                                                    @endforeach
+                                                    <!-- <li>
+                                                        <div class="preview">
+                                                            <img src="/images/c6f7339ea957882229dc4d3ac8a8cec3.jpg" alt="">
+                                                            <p>全25话</p>
+                                                        </div>
+                                                        <a href="javascript:;">Fate/Zero 第二季</a>
+                                                    </li>
+                                                    <li>
+                                                        <div class="preview">
+                                                            <img src="http://i0.hdslb.com/sp/32/32ff84ce8967b06061299a2acebcf72a.jpg" alt="">
+                                                            <p>全26话</p>
+                                                        </div>
+                                                        <a href="javascript:;">二舍六房的七人</a>
+                                                    </li>
+                                                    <li>
+                                                        <div class="preview">
+                                                            <img src="http://i1.hdslb.com/sp/67/67642f55895e70f058f3f74b6bea99e5.jpg" alt="">
+                                                            <p>全24话</p>
+                                                        </div>
+                                                        <a href="javascript:;">欢迎加入NHK！</a>
+                                                    </li>
+                                                    <li>
+                                                        <div class="preview">
+                                                            <img src="http://i0.hdslb.com/sp/14/14c2c9bef69fd1f5adf7ce617368018b.jpg" alt="">
+                                                            <p>全29话</p>
+                                                        </div>
+                                                        <a href="javascript:;">越狱兔 第1~5季</a>
+                                                    </li> -->
+                                                </ul>
+                                            </div>
+                                        </aside>
+                    </div>
+                 @endif
             @endforeach
 
             <div class="sidebar">
@@ -628,7 +478,7 @@
                         <a class="liebiao" href="#{{ $type->id }}"><li draggable="true" id="list{{ $type->id }}">{{ $type->name }}</li></a>
 
                     @endforeach
-                        <li class="sort">排序</li>
+                        <!-- <li class="sort">排序</li> -->
                     </ul>
                     <div class="sidebar-line"></div>
                     <div class="sidebar-arrow">

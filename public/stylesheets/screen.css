@@ -1419,6 +1419,10 @@ aside.aside-2 {
         height: 27px;
         margin-right: 20px;
         vertical-align: -2px; }
+      .part-animate .part-animate-top h2 a {
+        text-decoration:none;
+        color:black;
+      }
     /* line 1313, ../sass/screen.scss */
     .part-animate .part-animate-top .animation-tab {
       font-size: 12px;
@@ -2088,6 +2092,11 @@ aside.aside-2 {
       word-break: break-all;
       white-space: normal;
       line-height: 1.5; }
+    .list-box li .title a {
+      text-decoration:none;
+      color:black;
+     }
+
     /* line 1942, ../sass/screen.scss */
     .list-box li .episodes {
       color: #99A2AA;
@@ -2596,7 +2605,7 @@ footer .inner .copyright {
     text-align: center;
     float: right;
     position: absolute;
-    top:-180px;
+    top:-150px;
     z-index: 10000; }
 
 /* line 2489, ../sass/screen.scss */

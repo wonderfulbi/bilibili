@@ -78,7 +78,7 @@
                             <li><a href="">个人中心</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="">邮件</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                             <li><a href="">设置</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
-                            <li><a href="">退出</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="{{ URL('admin/logout') }}">退出</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
                         </ul>
                         <h4 class="m-0">聂俊威</h4>
                         @后台管理员
@@ -124,10 +124,11 @@
                             <span class="menu-item">系统管理</span>
                         </a>
                         <ul class="list-unstyled menu-item">
-                            <li><a href="form-elements.html">网站配置</a></li>
+                            <li><a href="{{ URL('admin/configuration') }}">网站配置</a></li>
+                            <li><a href="{{ URL('admin/friendlylink') }}">友情链接</a></li>
                             <li><a href="form-components.html">常规管理</a></li>
                             <li><a href="form-examples.html">公告管理</a></li>
-                            <li><a href="form-validation.html">友情链接</a></li>
+
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -135,10 +136,8 @@
                             <span class="menu-item">视频管理</span>
                         </a>
                         <ul class="list-unstyled menu-item">
-                            <li><a href="{{ URL('admin/vedio') }}">视频列表</a></li>
-                            <li><a href="labels.html">回收站</a></li>
-                            <li><a href="images-icons.html">数据统计</a></li>
-                            <li><a href="alerts.html">视频评论</a></li>
+                            <li><a href="{{ URL('admin/shipin') }}">视频列表</a></li>
+                            <li><a href="{{ URL('admin/garbage') }}">回收站</a></li>
                         </ul>
                     </li>
                     <li>

@@ -20,18 +20,19 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($list as $v)
                     <tr>
-                        <td>1</td>
+                        <td>{{ $num++ }}</td>
                         <td>Jhon </td>
-                        <td>xx</td>
-                        <td>鬼畜</td>
+                        <td><img src="{{ URL('/admins/img/profile-pics/1.jpg') }}" alt=""></td>
+                        <td><a href="/admin/shipin/{{ $v->id }}">{{ $v->name }}</a></td>
                         <td>
                             <a href="">添加子版块</a>|
                             <a href="">修改</a>|
-                            <a href="">删除</a>|
+                            <a href="">删除</a>
                         </td>
                     </tr>
-
+                @endforeach
                 </tbody>
             </table>
         </div>

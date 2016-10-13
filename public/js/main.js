@@ -82,13 +82,15 @@ function navClick(btn) {
 function carouselAuto(btn) {
     var index = 0;
     var timer;
+    var lunbo = $(".carousel-ctrl ul li").length;
     $(".carousel-title").html($('.carousel-list li').eq(index).find("img").attr("title"));
     $('.carousel').hover(function() {
         clearInterval(timer);
     }, function() {
+
         timer = setInterval(function() {
             index++;
-            if (index === 7) {
+            if (index === lunbo) {
                 index = 0;
             }
             $('.carousel-ctrl ul li').each(function(index, element) {
@@ -104,8 +106,10 @@ function carouselAuto(btn) {
     });
 
     timer = setInterval(function() {
+
+
         index++;
-        if (index === 7) {
+        if (index === lunbo) {
             index = 0;
         }
         $('.carousel-ctrl ul li').each(function(index, element) {
