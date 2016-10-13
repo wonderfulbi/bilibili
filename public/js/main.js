@@ -28,10 +28,6 @@ $(document).ready(function() {
         backToTop(0);
     });
 
-    $(".sidebar-list li").click(function(e){
-        dingwei($(this));
-    })
-
     //显示全屏遮罩与排序拖拽功能
     $(".sort").click(function() {
         showMainMaskAndDragTip();
@@ -40,6 +36,7 @@ $(document).ready(function() {
     $(".main-mask").click(function() {
         hideMainMaskAndDragTip();
     });
+
     //每次浏览器窗口大小改变，重置sidebar侧边栏的位置
     $(window).resize(function() {
         resetSidebar();
@@ -58,8 +55,6 @@ function init() {
     asideAnimationCtrl();
     //根据当前视口最上方的部分，确定右边栏列表自动切换选中状态
     scrollToAsideList();
-    //右边栏选中时当前视口自动定位
-    // dingewei();
     //设置sidebar侧边栏的位置
     resetSidebar();
 }
@@ -226,26 +221,26 @@ function animationEveryDay(today) {
 
 }
 //拖拽功能
-//该功能待完善
-// function dragItems(ele) {
-//     ele.onselectstart = function() {
-//         return false;
-//     };
-//     ele.ondragstart = function(e) {
-//         e.dataTransfer.effectAllowed = "move";
-//         e.dataTransfer.setData("text", e.target.id);
-//         e.dataTransfer.setDragImage(e.target, 0, 0);
-//     };
-//     ele.ondragover = function(e) {
-//         e.preventDefault();
-//         return true;
-//     };
-//     ele.ondrop = function(e) {
-//         e.preventDefault();
-//         e.dataTransfer.dropEffect = "move";
-//         $(this).insertAfter('#' + e.dataTransfer.getData("text"));
-//     };
-// }
+// 该功能待完善
+function dragItems(ele) {
+    ele.onselectstart = function() {
+        return false;
+    };
+    ele.ondragstart = function(e) {
+        e.dataTransfer.effectAllowed = "move";
+        e.dataTransfer.setData("text", e.target.id);
+        e.dataTransfer.setDragImage(e.target, 0, 0);
+    };
+    ele.ondragover = function(e) {
+        e.preventDefault();
+        return true;
+    };
+    ele.ondrop = function(e) {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = "move";
+        $(this).insertAfter('#' + e.dataTransfer.getData("text"));
+    };
+}
 
 //根据本日是周几自动切换新番列表
 function animationEveryDayAuto() {
@@ -301,15 +296,6 @@ function scrollToAsideList() {
     });
 }
 
-//定位
-function dingwei(){
-    window.location.hash = list4;
-    // $("html,body").animate({
-    //         scrollTop: top
-    //     },
-    //     300);
-}
-
 //回到顶部功能
 function backToTop(top) {
     $("html,body").animate({
@@ -318,33 +304,33 @@ function backToTop(top) {
         300);
 }
 //显示全屏遮罩与拖拽提示
-// function showMainMaskAndDragTip() {
-//     $(".main-mask").show();
-//     $(".sidebar").css({
-//         backgroundColor: ' rgba(255,255,255,0.8)',
-//     });
-//     $(".dragtip").css({
-//         opacity: '1',
-//         visibility: 'visible'
-//     });
-//     $(".sidebar-list li").css('cursor', 'move');
-//     var dragList = $(".sidebar-list li").not('.sort');
-//     dragList.each(function(index, el) {
-//         dragItems(el);
-//     });
-// }
+function showMainMaskAndDragTip() {
+    $(".main-mask").show();
+    $(".sidebar").css({
+        backgroundColor: ' rgba(255,255,255,0.8)',
+    });
+    $(".dragtip").css({
+        opacity: '1',
+        visibility: 'visible'
+    });
+    $(".sidebar-list li").css('cursor', 'move');
+    var dragList = $(".sidebar-list li").not('.sort');
+    dragList.each(function(index, el) {
+        dragItems(el);
+    });
+}
 // //取消全屏遮罩与拖拽提示
-// function hideMainMaskAndDragTip() {
-//     $(".main-mask").hide();
-//     $(".sidebar").css({
-//         backgroundColor: ' transparent',
-//     });
-//     $(".dragtip").css({
-//         opacity: '0',
-//         visibility: 'hidden'
-//     });
-//     $(".sidebar-list li").css('cursor', 'pointer');
-// }
+function hideMainMaskAndDragTip() {
+    $(".main-mask").hide();
+    $(".sidebar").css({
+        backgroundColor: ' transparent',
+    });
+    $(".dragtip").css({
+        opacity: '0',
+        visibility: 'hidden'
+    });
+    $(".sidebar-list li").css('cursor', 'pointer');
+}
 
 //设置sidebar侧边栏的位置
 function resetSidebar() {

@@ -56,9 +56,9 @@ class modelController extends Controller
         $vList = \DB::table('wb_video')->where('week','!=','0')->orderby('week')->get();
 
         //随机推荐的已完结番剧
+        $repeat = array();//收集随机数
 
-
-        return view('index',["hotList"=>$hotList,"list"=>$list,"typeList"=>$typeList,"tList"=>$tList,"lunbo"=>$lunbo,"listP"=>$listP,"arr"=>$arr,"vList"=>$vList,"overList"=>$overList]);
+        return view('index',["hotList"=>$hotList,"list"=>$list,"typeList"=>$typeList,"tList"=>$tList,"lunbo"=>$lunbo,"listP"=>$listP,"arr"=>$arr,"vList"=>$vList,"overList"=>$overList,"repeat"=>$repeat]);
     }
 
     /**

@@ -253,7 +253,12 @@
                         <header class="part-animate-aside">
                             <ul>
                                 <h2>排行</h2>
-
+                            <li class="live-active live-change">
+                                <a>三日</a>
+                            </li>
+                            <li class="live-change">
+                                <a>一周</a>
+                            </li>
 
                             </ul>
                         </header>
@@ -261,11 +266,8 @@
                             <span style="display:none;">{{$num=0}}</span>
                             <div class="rank-box">
                                 <ul>
-
                                     @foreach($listP[$type->id-1] as $p)
-
                                             <li>
-
                                                 <div class="rank">{{ $num+=1 }}</div>
 
                                                 <a href="{{ $p->link }}" class="rank-top">
@@ -273,7 +275,6 @@
                                                     <img src="{{ $p->image }}" alt="">
                                                 @endif
                                                 </a>
-
                                                 <a href="{{ $p->link }}" class="rank-top-info">
                                                     <p class="rank-id">
                                                         <span class="rank-name">
@@ -283,31 +284,33 @@
                                                     </p>
                                                 </a>
                                             </li>
-
-
                                     @endforeach
-
                                 </ul>
                             </div>
-                            <!-- <div class="rank-box">
+                            <div class="rank-box">
+                                <span style="display:none;">{{$num=0}}</span>
                                 <ul>
-                                    <li>
-                                        <div class="rank">1</div>
-                                        <a href="javascript:;" class="rank-top">
-                                            <img src="images/video/rank2-2.jpg" alt="哔哩哔哩音乐台">
-                                        </a>
-                                        <a href="javascript:;" class="rank-top-info">
-                                            <p class="rank-id">
-                                                <span class="rank-name">
-                                                   高达中十大开挂场景
-                                                </span>
-                                                <span class="rank-num">综合评分:23.4万</span>
-                                            </p>
-                                        </a>
-                                    </li>
+                                    @foreach($listP[$type->id-1] as $p)
+                                            <li>
+                                                <div class="rank">{{ $num+=1 }}</div>
 
+                                                <a href="{{ $p->link }}" class="rank-top">
+                                                @if($num==1)
+                                                    <img src="{{ $p->image }}" alt="">
+                                                @endif
+                                                </a>
+                                                <a href="{{ $p->link }}" class="rank-top-info">
+                                                    <p class="rank-id">
+                                                        <span class="rank-name">
+                                                          【{{ $p->name }}】q {{ $p->title }}
+                                                        </span>
+                                                        <span class="rank-num">{{ $p->count }}</span>
+                                                    </p>
+                                                </a>
+                                            </li>
+                                    @endforeach
                                 </ul>
-                            </div> -->
+                            </div>
                         </div>
                         <div class="checkmore">
                             <span>查看更多</span>
@@ -317,155 +320,117 @@
                 @if($type->name == "番剧")
                     <!--第五部分-2————番剧更新列表-->
                     <div class="part-animate-list">
-                                        <div class="list-left">
-                                            <header>
-                                                <ul>
-                                                    @for($i = 0;$i<=6;$i++)
-                                                        <li class="list-controller" id="day{{ $i }}">
-                                                            <div class="weekDay-active">
-                                                                <i class="icon"></i>
-                                                                <span>周{{ $arr[$i] }}</span>
-                                                            </div>
-                                                            <span class="weekDay">{{ $arr[$i] }}</span>
-                                                        </li>
-                                                    @endfor
+                        <div class="list-left">
+                            <header>
+                                <ul>
+                                    @for($i = 0;$i<=6;$i++)
+                                        <li class="list-controller" id="day{{ $i }}">
+                                            <div class="weekDay-active">
+                                                <i class="icon"></i>
+                                                <span>周{{ $arr[$i] }}</span>
+                                            </div>
+                                            <span class="weekDay">{{ $arr[$i] }}</span>
+                                        </li>
+                                    @endfor
 
-                                                </ul>
-                                                <a href="javascript:;" class="list-btn">
-                                                    <span>新番放送表</span>
-                                                </a>
-                                            </header>
-                                            @for($j = 1;$j<=7;$j++)
-                                                <div class="list-box-{{ $j }} list-box">
-                                                    <ul>
-                                                        @foreach($vList as $vlist)
-                                                            @if($vlist->week == $j)
-                                                                <li>
-                                                                    <div class="img-box">
-                                                                        <a href="{{ $vlist->link }}">
-                                                                        <img src="{{ $vlist->image }}" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <span class="title"><a href="{{ $vlist->link }}">{{ $vlist->title }}</a></span>
-                                                                    <span class="episodes">更新至<i>4话</i></span>
-                                                                </li>
-                                                            @endif
-                                                        @endforeach
+                                </ul>
+                                <a href="javascript:;" class="list-btn">
+                                    <span>新番放送表</span>
+                                </a>
+                            </header>
+                            @for($j = 1;$j<=7;$j++)
+                                <div class="list-box-{{ $j }} list-box">
+                                    <ul>
+                                        @foreach($vList as $vlist)
+                                            @if($vlist->week == $j)
+                                                <li>
+                                                    <div class="img-box">
+                                                        <a href="{{ $vlist->link }}">
+                                                        <img src="{{ $vlist->image }}" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <span class="title"><a href="{{ $vlist->link }}">{{ $vlist->title }}</a></span>
+                                                    <span class="episodes">更新至<i>4话</i></span>
+                                                </li>
+                                            @endif
+                                        @endforeach
 
-                                                    </ul>
+                                    </ul>
+                                </div>
+                            @endfor
+                        </div>
+                        <aside>
+                            <div class="carousel-box">
+                                <ul class="carousel-panel">
+                                    @foreach($vList as $vlist)
+                                        @if($vlist->top == 1)
+                                        <li class="carousel-img">
+                                            <a href="{{ $vlist->link }}">
+                                                <img src="{{ $vlist->image }}" alt="">
+                                            </a>
+                                        </li>
+                                        @endif
+                                    @endforeach
+
+                                </ul>
+
+                                <!-- 固定推荐三部已完结番剧 -->
+                                <div class="carousel-box-ctrl">
+
+                                    <ul>
+                                        <span style="display:none;">{{$num=1}}</span>
+                                        @foreach($vList as $vlist)
+                                            @if($vlist->tid == $type->id && $vlist->week != 0 && $vlist->top == 1)
+                                                @if($num == 1)
+                                                   <li data-name="{{ $vlist->title }}" data-index="0" class="active">
+                                        </li>
+                                                @else
+                                                    <li data-name="{{ $vlist->title }}" data-index="{{ $num-1 }}">
+                                        </li>
+                                                @endif
+                                                    <span style="display:none;">{{$num++}}</span>
+                                            @endif
+                                        @endforeach
+                                        <span style="display:none;">{{$num=0}}</span>
+
+                                    </ul>
+
+                                    <span class="animate-name">
+                                        {{ $vList[0]->title }}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="finish-list">
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+
+                            <!-- 随即推荐四部已完结番剧 -->
+                            <div class="other-finish">
+                                <ul>
+                                    <!--数组为空的时候遍历了一次，所以次数为4-1次-->
+                                    @for($i=1;count($repeat)<=3;$i++)
+                                        <span style="display:none">
+                                            {{ $sum = rand(0,count($overList[$type->id-1])-1) }}
+                                        </span>
+                                        @if(!in_array($sum,$repeat))
+                                            <li>
+                                                <div class="preview">
+                                                    <img src="/images/{{ $overList[$type->id-1][$sum]->image }}" alt="">
+                                                    <p>全25话</p>
                                                 </div>
-                                            @endfor
-                                        </div>
-                                        <aside>
-                                            <div class="carousel-box">
-                                                <ul class="carousel-panel">
-                                                    @foreach($vList as $vlist)
-                                                        @if($vlist->top == 1)
-                                                        <li class="carousel-img">
-                                                            <a href="{{ $vlist->link }}">
-                                                                <img src="{{ $vlist->image }}" alt="">
-                                                            </a>
-                                                        </li>
-                                                        @endif
-                                                    @endforeach
-                                                    <!-- <li class="carousel-img">
-                                                        <a href="q">
-                                                        <img src="http://i0.hdslb.com/u_user/9b79d30420b9f32c31785de7f7518cde.jpg" alt=""></a>
-                                                    </li>
-                                                    <li class="carousel-img">
-                                                        <a href="q">
-                                                        <img src="http://i2.hdslb.com/u_user/046ccd23b5e1b0e0d82e7a02936ac981.jpg" alt=""></a>
-                                                    </li>
-                                                    <li class="carousel-img">
-                                                        <a href="q">
-                                                        <img src="http://i2.hdslb.com/u_user/eba3ff2c512a39a67f57005d01981033.jpg" alt=""></a>
-                                                    </li> -->
-                                                </ul>
-
-                                                <!-- 固定推荐三部已完结番剧 -->
-                                                <div class="carousel-box-ctrl">
-
-                                                    <ul>
-                                                    <!-- <span style="display:none;">{{$num=1}}</span> -->
-                                                        @foreach($vList as $vlist)
-                                                            @if($vlist->tid == $type->id && $vlist->week != 0 && $vlist->top == 1)
-                                                                @if($num == 1)
-                                                                   <li data-name="{{ $vlist->title }}" data-index="0" class="active">
-                                                        </li>
-                                                                @else
-                                                                    <li data-name="{{ $vlist->title }}" data-index="{{ $num-1 }}">
-                                                        </li>
-                                                                @endif
-                                                                    <span style="display:none;">{{$num++}}</span>
-                                                            @endif
-                                                        @endforeach
-                                                        <span style="display:none;">{{$num=0}}</span>
-                                                        <!-- <li data-name="混沌武士" data-index="0" class="active">
-                                                        </li>
-                                                        <li data-name="老虎和兔子" data-index="1">
-                                                        </li>
-                                                        <li data-name="隐王" data-index="2">
-                                                        </li> -->
-                                                    </ul>
-
-                                                    <span class="animate-name">
-                                                        {{ $vList[0]->title }}
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="finish-list">
-                                                <ul>
-                                                    <li></li>
-                                                    <li></li>
-                                                    <li></li>
-                                                    <li></li>
-                                                </ul>
-                                            </div>
-
-                                            <!-- 随即推荐四部已完结番剧 -->
-                                            <div class="other-finish">
-                                                <ul>
-                                                    @foreach($overList[$type->id-1] as $overlist)
-
-                                                       <li>
-                                                            <div class="preview">
-                                                                <img src="/images/c6f7339ea957882229dc4d3ac8a8cec3.jpg" alt="">
-                                                                <p>全25话</p>
-                                                            </div>
-                                                            <a href="javascript:;">{{ $overlist->title }}</a>
-                                                        </li>
-                                                    @endforeach
-                                                    <!-- <li>
-                                                        <div class="preview">
-                                                            <img src="/images/c6f7339ea957882229dc4d3ac8a8cec3.jpg" alt="">
-                                                            <p>全25话</p>
-                                                        </div>
-                                                        <a href="javascript:;">Fate/Zero 第二季</a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="preview">
-                                                            <img src="http://i0.hdslb.com/sp/32/32ff84ce8967b06061299a2acebcf72a.jpg" alt="">
-                                                            <p>全26话</p>
-                                                        </div>
-                                                        <a href="javascript:;">二舍六房的七人</a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="preview">
-                                                            <img src="http://i1.hdslb.com/sp/67/67642f55895e70f058f3f74b6bea99e5.jpg" alt="">
-                                                            <p>全24话</p>
-                                                        </div>
-                                                        <a href="javascript:;">欢迎加入NHK！</a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="preview">
-                                                            <img src="http://i0.hdslb.com/sp/14/14c2c9bef69fd1f5adf7ce617368018b.jpg" alt="">
-                                                            <p>全29话</p>
-                                                        </div>
-                                                        <a href="javascript:;">越狱兔 第1~5季</a>
-                                                    </li> -->
-                                                </ul>
-                                            </div>
-                                        </aside>
+                                                <a href="javascript:;">{{ $overList[$type->id-1][$sum]->title }}</a>
+                                                <div style="display:none">{{ $repeat[] = $sum }}</div>
+                                            </li>
+                                        @endif
+                                    @endfor
+                                </ul>
+                            </div>
+                        </aside>
                     </div>
                  @endif
             @endforeach
@@ -478,7 +443,7 @@
                         <a class="liebiao" href="#{{ $type->id }}"><li draggable="true" id="list{{ $type->id }}">{{ $type->name }}</li></a>
 
                     @endforeach
-                        <!-- <li class="sort">排序</li> -->
+                        <li class="sort">排序</li>
                     </ul>
                     <div class="sidebar-line"></div>
                     <div class="sidebar-arrow">
