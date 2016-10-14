@@ -1418,7 +1418,11 @@ aside.aside-2 {
         width: 27px;
         height: 27px;
         margin-right: 20px;
-        vertical-align: -2px; }
+        vertical-align: -10px; }
+      .part-animate .part-animate-top h2 i {
+        width:40px;
+        height:39px;
+      }
       .part-animate .part-animate-top h2 a {
         text-decoration:none;
         color:black;
@@ -1459,7 +1463,9 @@ aside.aside-2 {
     .part-animate .part-animate-top .btn-right {
       float: right;
       display: inline-block;
-      margin-right: 20px; }
+      margin-right: 20px;
+      margin-top:10px;
+     }
     /* line 1352, ../sass/screen.scss */
     .part-animate .part-animate-top .btn-reset {
       display: inline-block;
@@ -2183,7 +2189,10 @@ aside.aside-2 {
     width: 56px;
     padding-right: 12px; }
     /* line 2027, ../sass/screen.scss */
-    .other-finish li:nth-child(4) {
+    // 10.14 10:20修改
+    // .other-finish li:nth-child(4) {
+    //   padding-right: 0; }
+      .other-finish li:last-child {
       padding-right: 0; }
     /* line 2031, ../sass/screen.scss */
     .other-finish li:hover a {
@@ -2230,12 +2239,12 @@ aside.aside-2 {
         outline: none; }
 
 /* line 2075, ../sass/screen.scss */
-#part4 .part-animate-top i {
-  background: transparent url('../images/icons.png?1455092879') -84px -209px no-repeat; }
+// #part4 .part-animate-top i {
+//   background: transparent url('../images/icons.png?1455092879') -84px -209px no-repeat; }
 
 /* line 2082, ../sass/screen.scss */
-#part5 .part-animate-top i {
-  background: transparent url('../images/icons.png?1455092879') -84px -272px no-repeat; }
+// #part5 .part-animate-top i {
+//   background: transparent url('../images/icons.png?1455092879') -84px -272px no-repeat; }
 
 /* line 2089, ../sass/screen.scss */
 #part6 .part-animate-top i {
@@ -2591,7 +2600,7 @@ footer .inner .copyright {
     margin-left: 15px;
     margin-top: 15px;
     position: absolute;
-    top: -200px;
+    top: -140px;
     transition: all 0.12s linear;
     z-index: 1;
     margin-left: -135px;
