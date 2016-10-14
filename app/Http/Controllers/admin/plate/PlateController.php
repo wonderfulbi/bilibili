@@ -16,14 +16,27 @@ class PlateController extends Controller
      */
     public function index()
     {
-        //
+        //遍历出所有分区
         $num=1;
-        $list = \DB::table("wb_vtype")->get();
+        $list = \DB::table("wb_vtype")->paginate(3);
         // $vlist= \DB::table("wb_video")->where()->get();
         return view("admin.plate.plate",["list"=>$list,"num"=>$num]);
     }
 
 
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function find(Request $request)
+    {
+       //分区管理页面的搜索,模糊搜索分区
+        $sear = $request->input("search1");
+        $list = \DB::table("wb_vtype")->where("name","like","%{$sear}%")->paginate(3);
+        $num=1;
+        return view("admin.plate.plate",["list"=>$list,"num"=>$num]);
+    }
 
 
 
@@ -32,11 +45,6 @@ class PlateController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function indexx()
-    {
-        //
-        return view("admin.plate.addplate");
-    }
 
 
 
@@ -51,6 +59,7 @@ class PlateController extends Controller
     public function create()
     {
         //
+        return view("admin.plate.addplate");
     }
 
     /**
@@ -62,6 +71,13 @@ class PlateController extends Controller
     public function store(Request $request)
     {
         //
+         // dd($request->input("name"));
+        $name = $request->input("name");
+        $aff = \DB::insert("insert into wb_vtype(name) values(?)",[$name]);
+        if($aff>0){
+            return redirect("admin/plate");
+        }
+        return back();
     }
 
     /**
@@ -107,5 +123,6 @@ class PlateController extends Controller
     public function destroy($id)
     {
         //
+        dd($id);
     }
 }

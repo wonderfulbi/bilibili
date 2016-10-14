@@ -68,8 +68,11 @@ Route::group(["prefix"=>"admin","middleware"=>"myauth"],function(){
     //分区管理和分区增加
     //@auth niejunwei
     Route::get("plate","admin\plate\PlateController@index");//分区管理页面
-    Route::get("addplate","admin\plate\PlateController@indexx"); //跳转后台分区添加页面
+    Route::get("addplate","admin\plate\PlateController@create"); //跳转后台分区添加页面
     // Route::get("sub","adim\plate\PlateController@");
+    Route::post("aplate","admin\plate\PlateController@store"); //分区添加方法
+    Route::post("sear","admin\plate\PlateController@find"); //分区页面的内容搜索
+    Route::post("del/{id}","admin\plate\PlateController@destroy");//删除分区
 
     //视频管理
     //@auth niejunwei

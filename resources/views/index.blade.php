@@ -219,7 +219,7 @@
                         </header>
                         <div class="video-list">
                             <ul>
-                            @foreach($list[$type->id-1] as $v)
+                            @foreach($list[($type->id)-1] as $v)
 
                                     <li>
 
