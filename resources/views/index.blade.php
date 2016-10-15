@@ -8,7 +8,8 @@
     <meta name="description" content="bilibili是国内知名的视频弹幕网站，这里有最及时的动漫新番，最棒的ACG氛围，最有创意的Up主。大家可以在这里找到许多欢乐。">
     <meta name="keywords" content="B站,弹幕,字幕,AMV,MAD,MTV,ANIME,动漫,动漫音乐,游戏,游戏解说,ACG,galgame,动画,番组,新番,初音,洛天依,vocaloid">
     <title>哔哩哔哩弹幕视频网 - ( ゜- ゜)つロ  乾杯~  - bilibili</title>
-    <link rel="shortcut icon" href="http://static.hdslb.com/images/favicon.ico">
+    <!-- <link rel="shortcut icon" href="http://static.hdslb.com/images/favicon.ico"> -->
+    <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="stylesheets/screen.css">
 </head>
 
@@ -57,9 +58,10 @@
                 </div>
             </nav>
             <div class="search">
-                <form action="">
-                    <input type="text" placeholder="尻夫♂的爱">
-                    <button></button>
+                <form action="/search" method="post">
+                    <input type="text" name="search" placeholder="尻夫♂的爱">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <input type="submit" name="submit" id="submit" value="">
                 </form>
                 <div class="ranking">
                     <a href="javascript:;">排行榜</a>
@@ -74,6 +76,10 @@
                 <ul class="navlist-box">
                     <li class="home">
                         <a href="/">首页</a>
+                    </li>
+                    <li class="list-panel">
+                        <i>203</i>
+                        <a href="javascript:;">广告</a>
                     </li>
                     @foreach($typeList as $type)
                         <li class="list-panel">
@@ -94,14 +100,14 @@
                         </li>
                     @endforeach
 
-                    <li class="list-panel">
+                    <!-- <li class="list-panel">
                         <span></span>
 
-                    </li>
-                    <li class="list-panel">
+                    </li> -->
+                    <!-- <li class="list-panel">
                         <span></span>
 
-                    </li>
+                    </li> -->
                     <li class="list-panel nav-gif" title="miku">
                     </li>
                     <li class="list-panel nav-iphone">
@@ -151,15 +157,6 @@
                 <!-- 热门视频遍历 条件：播放量-->
                 <div class="indextop-video">
                     <ul class="indextop-video-listpanel">
-                        <!-- <li class="indextop-video-list">
-                            <div class="mask"></div>
-                            <div class="video-img"><img src="http://i0.hdslb.com/320_200/video/08/08a6a4bc9fe1679ffd6377f4ec8eb5e2.jpg" alt="test"></div>
-                            <div class="info">
-                                <h2>【祈Inory】《雏蜂》粤语OP【BEE配音组企划】</h2>
-                                <p>up主：祈Inory</p>
-                                <p>播放：33423</p>
-                            </div>
-                        </li> -->
                         @foreach($hotList as $v)
                         <li class="indextop-video-list">
                             <a href="{{ $v->link }}">
@@ -172,7 +169,6 @@
                                 </div>
                             </a>
                         </li>
-
                         @endforeach
                     </ul>
                 </div>
@@ -180,16 +176,13 @@
 
             <!--广告-->
             <script type="text/javascript" src="js/adlunbo.js"></script>
-            <div class="inner-section part13 part-animate" id="part13">
-                <div class="box-left">
+            <a name="ad"></a>
+            <div class="inner-section part-animate">
+                <div class="box-left" style="width:100%"">
                     <header class="part-animate-top">
                         <h2><i><img src="images/plateimg/b_ad.png" alt=""></i>广告</h2>
 
                         <div class="btn-right">
-                            <div class="btn-reset">
-                                <a href="javascript:;"></a>
-                                <span><strong>2967</strong>条新动态</span>
-                            </div>
                             <div class="btn-more">
                                 <a href="javascript:;">更多</a>
                             </div>
@@ -198,40 +191,37 @@
                 </div>
                 <div style="width:100%;text-align:left">
                     <DIV id="demo" style="OVERFLOW: hidden; WIDTH: 1160px; COLOR: #ffffff; HEIGHT: 140px; margin:0 auto;" onmousemove="MoveDiv(event);" onmouseout="MoveOutDiv();">
-                        <div id="demo1" style="width:100%;">
+                        <div id="demo1" style="width:200%;">
                             <TABLE cellSpacing=0 cellPadding=0>
                                 <TBODY>
                                     <TR vAlign=top>
                                         <TD vAlign=top noWrap>
                                             <DIV align=right>
-                                                <img src="http://i0.hdslb.com/320_200/video/1b/1bfab892c91841f158cc840998b7b1df.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
-                                                <img src="http://i0.hdslb.com/320_200/video/1b/1bfab892c91841f158cc840998b7b1df.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
-                                                <img src="http://i0.hdslb.com/320_200/video/1b/1bfab892c91841f158cc840998b7b1df.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
-                                                <img src="http://i0.hdslb.com/320_200/video/1b/1bfab892c91841f158cc840998b7b1df.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
-                                                <img src="http://i0.hdslb.com/320_200/video/1b/1bfab892c91841f158cc840998b7b1df.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
-                                                <img src="http://i0.hdslb.com/320_200/video/1b/1bfab892c91841f158cc840998b7b1df.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
-                                                <img src="http://i0.hdslb.com/320_200/video/1b/1bfab892c91841f158cc840998b7b1df.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
-                                                <img src="http://i0.hdslb.com/320_200/video/1b/1bfab892c91841f158cc840998b7b1df.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
-                                                <img src="http://i0.hdslb.com/320_200/video/1b/1bfab892c91841f158cc840998b7b1df.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
-                                                <img src="http://i0.hdslb.com/320_200/video/1b/1bfab892c91841f158cc840998b7b1df.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
-                                                <img src="http://i0.hdslb.com/320_200/video/1b/1bfab892c91841f158cc840998b7b1df.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
-                                                <img src="http://i0.hdslb.com/320_200/video/1b/1bfab892c91841f158cc840998b7b1df.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
-                                                <img src="http://i0.hdslb.com/320_200/video/1b/1bfab892c91841f158cc840998b7b1df.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
-                                                <img src="http://i0.hdslb.com/320_200/video/1b/1bfab892c91841f158cc840998b7b1df.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
-                                                <img src="http://i0.hdslb.com/320_200/video/1b/1bfab892c91841f158cc840998b7b1df.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
-                                                <img src="http://i0.hdslb.com/320_200/video/1b/1bfab892c91841f158cc840998b7b1df.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
+                                                @for($adNum = 0;$adNum<=7;$adNum++)
+                                                    @if($adNum <= (count($adList)-1))
+                                                        <img src="images/{{ $adList[$adNum]->adImage }}" style="width:286px;height:140px;border-radius:5px"  alt="">
+                                                        <!-- <img src="images/adimg/c6f7339ea957882229dc4d3ac8a8cec3.jpg" style="width:286px;height:140px;border-radius:5px"  alt=""> -->
+                                                    @else
+                                                        <img src="images/1320936267667-3668.gif" style="width:286px;height:140px;border-radius:5px"  alt="">
+                                                    @endif
+                                                @endfor
+                                                @for($adNum = 0;$adNum<=7;$adNum++)
+                                                    @if($adNum <= (count($adList)-1))
+                                                        <img src="images/{{ $adList[$adNum]->adImage }}" style="width:286px;height:140px;border-radius:5px"  alt="">
+                                                    @else
+                                                        <img src="images/443573_20141221175143645200_1.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
+                                                    @endif
+                                                @endfor
                                             </DIV>
                                         </TD>
                                     </TR>
                                 </TBODY>
                             </TABLE>
                         </div>
-                        <div id="demo2" style="width:100%;"></div>
+                        <div id="demo2" style="width:200%;"></div>
                     </DIV>
                 </div>
             </div>
-
-
             <script type="text/javascript">
              document.getElementById("demo2").innerHTML = document.getElementById("demo1").innerHTML;
              MyMar=setInterval(Marquee,speed);
@@ -239,8 +229,8 @@
             <!-- 分区遍历 -->
             <span style="display:none;">{{$tnum=0}}</span>
             @foreach($typeList as $type)
-                <a name="{{ $type->id }}"></a>
-                <div class="inner-section part{{ $tnum+1 }} part-animate" id="part{{ $tnum+4 }}">
+                <a name="{{ $type->id }}">
+                <div class="inner-section part{{ $tnum+1 }} part-animate" >
                     <div class="box-left">
                         <header class="part-animate-top">
                             <h2><i><img src="images/plateimg/{{ $type->typeImage }}" alt=""></i><a href="{{ $type->link }}">{{ $type->name }}</a></h2>
@@ -477,12 +467,14 @@
                     </div>
                  @endif
 
-<span style="display:none;">{{$tnum++}}</span>
+                <span style="display:none;">{{$tnum++}}</span>
+                </a>
             @endforeach
 
             <div class="sidebar">
                 <div class="sidebar-box">
                     <ul class="sidebar-list">
+                        <a class="liebiao" href="#ad" draggable="true"><li draggable="true">广告</li></a>
                     @foreach($typeList as $type)
 
                         <a class="liebiao" href="#{{ $type->id }}" draggable="true"><li draggable="true" id="list{{ $tnum+1 }}">{{ $type->name }}</li></a>

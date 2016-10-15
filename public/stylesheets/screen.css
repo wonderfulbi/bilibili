@@ -333,7 +333,7 @@ header.navbar {
       background-color: transparent;
       padding: 0 20px; }
     /* line 243, ../sass/screen.scss */
-    .search form button {
+    .search form #submit {
       background: transparent url('../images/icons.png?1455092879') -653px -720px no-repeat;
       width: 48px;
       height: 32px;

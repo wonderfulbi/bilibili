@@ -20,6 +20,9 @@ Route::get('/login','demo\RegisterController@login');//进入登录页面
 Route::post('/dologin','demo\RegisterController@dologin');// 前台登录执行
 Route::get("/demo/captcha/{tmp}","demo\RegisterController@captcha");//验证码
 
+Route::post('/search','demo\MySearchController@index');//搜索
+
+
 //个人中心
 //@auth huangzhen
 

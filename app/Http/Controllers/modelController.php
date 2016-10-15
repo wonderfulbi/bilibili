@@ -62,7 +62,10 @@ class modelController extends Controller
         //首页推荐遍历
         // $pro = \DB::table('wb_video')->where('top','1')->where('wb_video.')
 
-        return view('index',["hotList"=>$hotList,"list"=>$list,"typeList"=>$typeList,"tList"=>$tList,"lunbo"=>$lunbo,"listP"=>$listP,"arr"=>$arr,"vList"=>$vList,"overList"=>$overList,"repeat"=>$repeat]);
+        //首页广告遍历
+        $adList = \DB::table('wb_ad')->where('top','1')->get();
+        // dd($adList);
+        return view('index',["hotList"=>$hotList,"list"=>$list,"typeList"=>$typeList,"tList"=>$tList,"lunbo"=>$lunbo,"listP"=>$listP,"arr"=>$arr,"vList"=>$vList,"overList"=>$overList,"repeat"=>$repeat,"adList"=>$adList]);
     }
 
     /**

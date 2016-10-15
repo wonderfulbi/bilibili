@@ -346,3 +346,8 @@ function resetSidebar() {
     $(".sidebar").css('left', mainInnerWidthAndLeft - 100);
     $(".sidebar").css('top', mainInnerWidthAndTop*0.3);
 }
+
+//首页搜索指针变小手
+$('#submit').hover(function(){
+    $("#submit").css('cursor', 'pointer');
+})
