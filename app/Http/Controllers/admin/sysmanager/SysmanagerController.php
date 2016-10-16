@@ -18,7 +18,8 @@ class SysmanagerController extends Controller
     {
         //查询网站基本配置信息，并输入到配置页面
         $list = \DB::table("wb_config")->get();
-        return view("admin.sysmanager.configuration",["list"=>$list]);
+        $slist= \DB::table("wb_flink")->get();
+        return view("admin.sysmanager.configuration",["list"=>$list,"slist"=>$slist]);
     }
 
 
@@ -86,6 +87,10 @@ class SysmanagerController extends Controller
     public function update(Request $request, $id=0)
     {
         //
+        $title = $request->input("title");
+        $key = $request->input("key");
+        $descript = $request->input("descript");
+        $copyright = $request->input("copyright");
         dd($request);
     }
 

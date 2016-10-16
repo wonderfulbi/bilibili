@@ -222,25 +222,25 @@
         </section>
 
 
-       <!-- xdl-model提示框模板 -->
-        <div id="xdl-alert" class="modal">
-          <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                <h5 class="modal-title"><i class="fa fa-exclamation-circle"></i> [Title]</h5>
-              </div>
-              <div class="modal-body small">
-                <p>[Message]</p>
-              </div>
-              <div class="modal-footer" >
-                <button type="button" class="btn btn-primary ok" data-dismiss="modal">[BtnOk]</button>
-                <button type="button" class="btn btn-default cancel" data-dismiss="modal">[BtnCancel]</button>
-              </div>
+       <!-- system modal start -->
+      <div id="ycf-alert" class="modal">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+              <h5 class="modal-title"><i class="fa fa-exclamation-circle"></i> [Title]</h5>
+            </div>
+            <div class="modal-body small">
+              <p>[Message]</p>
+            </div>
+            <div class="modal-footer" >
+              <button type="button" class="btn btn-primary ok" data-dismiss="modal">[BtnOk]</button>
+              <button type="button" class="btn btn-default cancel" data-dismiss="modal">[BtnCancel]</button>
             </div>
           </div>
         </div>
-        <!-- xdl-model-end -->
+      </div>
+      <!-- system modal end -->
 
         <!-- Javascript Libraries -->
         <!-- jQuery -->
@@ -279,20 +279,21 @@
         <!-- All JS functions -->
         <script src="{{ asset('admins/js/functions.js') }}"></script>
 
-        <!-- XDL-model-提示框 -->
-        <script src="{{ asset('admins/bootstrap/js/ws-modal-alert-confirm.js') }}"></script>
 
-        <!-- model演示 -->
-        <script src="{{asset('admins/dist/js/demo.js')}}" type="text/javascript"></script>
-        @if(session("err"))
-            <script type="text/javascript">
-                Modal.alert({msg: "{{session('err')}}",title: ' 信息提示',btnok: '确定',btncl:'取消'});
-            </script>
-        @endif
+       <!-- modal实现弹出框和确认框效果 -->
+        <script src="{{ asset('admins/bootstrap/js/ws-modal-alert-confirm.js') }}"></script>
 
 
         @section("myscript")
 
         @show
+
+
+         @if(session("err"))
+          <script type="text/javascript">
+            Modal.alert({msg: "{{session('err')}}",title: ' 信息提示',btnok: '确定',btncl:'取消'});
+        </script>
+        @endif
+
     </body>
 </html>

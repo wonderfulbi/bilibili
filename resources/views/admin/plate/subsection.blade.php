@@ -7,33 +7,25 @@
 @section('content')
    <!-- Table Hover -->
     <div class="block-area" id="tableHover">
-        <h3 class="block-title">您的位置->管理栏目->添加子版块</h3>
-        <div class="table-responsive overflow">
-            <table class="table table-bordered table-hover tile">
-                <thead>
-                    <tr>
-                        <th>顺序</th>
-                        <th>分类树</th>
-                        <th>缩略图</th>
-                        <th>栏目名</th>
-                        <th>栏目管理</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Jhon </td>
-                        <td>xx</td>
-                        <td>鬼畜</td>
-                        <td>
-                            <a href="">添加子版块</a>|
-                            <a href="">修改</a>|
-                            <a href="">删除</a>|
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
+        <h3 class="block-title">您的位置->管理栏目->添加子模块</h3>
+         <!-- Basic with panel-->
+        <div class="block-area" id="basic">
+            <h3 class="block-title">添加子模块</h3>
+            <div class="tile p-15">
+                <form role="form" action="{{ URL('admin/addsub') }}/{{ $id }}"  method="post">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">分区名称</label>
+                        <input type="text" class="form-control input-sm" id="exampleInputEmail1"  name="name" value="{{ $list[0] }}" readonly />
+                    </div>
+                     <div class="form-group">
+                        <label for="exampleInputEmail1">子分区名称</label>
+                        <input type="text" class="form-control input-sm" id="exampleInputEmail1"  name="subname">
+                    </div>
+                    <button type="submit" class="btn btn-sm m-t-10">确认增添</button>
+                    <button type="reset" class="btn btn-sm m-t-10">重置</button>
+                </form>
+            </div>
         </div>
     </div>
 @endsection
