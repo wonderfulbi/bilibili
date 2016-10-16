@@ -8,7 +8,8 @@
     <meta name="description" content="bilibili是国内知名的视频弹幕网站，这里有最及时的动漫新番，最棒的ACG氛围，最有创意的Up主。大家可以在这里找到许多欢乐。">
     <meta name="keywords" content="B站,弹幕,字幕,AMV,MAD,MTV,ANIME,动漫,动漫音乐,游戏,游戏解说,ACG,galgame,动画,番组,新番,初音,洛天依,vocaloid">
     <title>哔哩哔哩弹幕视频网 - ( ゜- ゜)つロ  乾杯~  - bilibili</title>
-    <link rel="shortcut icon" href="http://static.hdslb.com/images/favicon.ico">
+    <!-- <link rel="shortcut icon" href="http://static.hdslb.com/images/favicon.ico"> -->
+    <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="stylesheets/screen.css">
 </head>
 
@@ -57,9 +58,10 @@
                 </div>
             </nav>
             <div class="search">
-                <form action="">
-                    <input type="text" placeholder="尻夫♂的爱">
-                    <button></button>
+                <form action="/search" method="post">
+                    <input type="text" name="search" placeholder="尻夫♂的爱">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <input type="submit" name="submit" id="submit" value="">
                 </form>
                 <div class="ranking">
                     <a href="javascript:;">排行榜</a>
@@ -74,6 +76,10 @@
                 <ul class="navlist-box">
                     <li class="home">
                         <a href="/">首页</a>
+                    </li>
+                    <li class="list-panel">
+                        <i>203</i>
+                        <a href="javascript:;">广告</a>
                     </li>
                     @foreach($typeList as $type)
                         <li class="list-panel">
@@ -94,14 +100,14 @@
                         </li>
                     @endforeach
 
-                    <li class="list-panel">
+                    <!-- <li class="list-panel">
                         <span></span>
 
-                    </li>
-                    <li class="list-panel">
+                    </li> -->
+                    <!-- <li class="list-panel">
                         <span></span>
 
-                    </li>
+                    </li> -->
                     <li class="list-panel nav-gif" title="miku">
                     </li>
                     <li class="list-panel nav-iphone">
@@ -117,7 +123,7 @@
     <section class="main">
         <!--定宽度居中显示————针对不同屏幕由@media自适应-->
         <div class="main-inner">
-            <!--第一部分————首页视频推荐-->
+            <!--第一部分————首页推荐-->
             <div class="part1">
                 <div class="carousel">
                     <ul class="carousel-list">
@@ -143,43 +149,14 @@
                                     </li>
                                 @endif
                             @endfor
-                            <!-- <li class="active">
-                                <a href=""></a>
-                            </li>
-                            <li>
-                                <a href=""></a>
-                            </li>
-                            <li>
-                                <a href=""></a>
-                            </li>
-                            <li>
-                                <a href=""></a>
-                            </li>
-                            <li>
-                                <a href=""></a>
-                            </li>
-                            <li>
-                                <a href=""></a>
-                            </li>
-                            <li>
-                                <a href=""></a>
-                            </li> -->
+
                         </ul>
                         <span class="carousel-title"></span>
                     </nav>
                 </div>
-                <!-- 热门视频遍历 -->
+                <!-- 热门视频遍历 条件：播放量-->
                 <div class="indextop-video">
                     <ul class="indextop-video-listpanel">
-                        <!-- <li class="indextop-video-list">
-                            <div class="mask"></div>
-                            <div class="video-img"><img src="http://i0.hdslb.com/320_200/video/08/08a6a4bc9fe1679ffd6377f4ec8eb5e2.jpg" alt="test"></div>
-                            <div class="info">
-                                <h2>【祈Inory】《雏蜂》粤语OP【BEE配音组企划】</h2>
-                                <p>up主：祈Inory</p>
-                                <p>播放：33423</p>
-                            </div>
-                        </li> -->
                         @foreach($hotList as $v)
                         <li class="indextop-video-list">
                             <a href="{{ $v->link }}">
@@ -192,21 +169,72 @@
                                 </div>
                             </a>
                         </li>
-
                         @endforeach
                     </ul>
                 </div>
             </div>
+
+            <!--广告-->
+            <script type="text/javascript" src="js/adlunbo.js"></script>
+            <a name="ad"></a>
+            <div class="inner-section part-animate">
+                <div class="box-left" style="width:100%"">
+                    <header class="part-animate-top">
+                        <h2><i><img src="images/plateimg/b_ad.png" alt=""></i>广告</h2>
+
+                        <div class="btn-right">
+                            <div class="btn-more">
+                                <a href="javascript:;">更多</a>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+                <div style="width:100%;text-align:left">
+                    <DIV id="demo" style="OVERFLOW: hidden; WIDTH: 1160px; COLOR: #ffffff; HEIGHT: 140px; margin:0 auto;" onmousemove="MoveDiv(event);" onmouseout="MoveOutDiv();">
+                        <div id="demo1" style="width:200%;">
+                            <TABLE cellSpacing=0 cellPadding=0>
+                                <TBODY>
+                                    <TR vAlign=top>
+                                        <TD vAlign=top noWrap>
+                                            <DIV align=right>
+                                                @for($adNum = 0;$adNum<=7;$adNum++)
+                                                    @if($adNum <= (count($adList)-1))
+                                                        <img src="images/{{ $adList[$adNum]->adImage }}" style="width:286px;height:140px;border-radius:5px"  alt="">
+                                                        <!-- <img src="images/adimg/c6f7339ea957882229dc4d3ac8a8cec3.jpg" style="width:286px;height:140px;border-radius:5px"  alt=""> -->
+                                                    @else
+                                                        <img src="images/1320936267667-3668.gif" style="width:286px;height:140px;border-radius:5px"  alt="">
+                                                    @endif
+                                                @endfor
+                                                @for($adNum = 0;$adNum<=7;$adNum++)
+                                                    @if($adNum <= (count($adList)-1))
+                                                        <img src="images/{{ $adList[$adNum]->adImage }}" style="width:286px;height:140px;border-radius:5px"  alt="">
+                                                    @else
+                                                        <img src="images/443573_20141221175143645200_1.jpg" style="width:286px;height:140px;border-radius:5px"  alt="">
+                                                    @endif
+                                                @endfor
+                                            </DIV>
+                                        </TD>
+                                    </TR>
+                                </TBODY>
+                            </TABLE>
+                        </div>
+                        <div id="demo2" style="width:200%;"></div>
+                    </DIV>
+                </div>
+            </div>
+            <script type="text/javascript">
+             document.getElementById("demo2").innerHTML = document.getElementById("demo1").innerHTML;
+             MyMar=setInterval(Marquee,speed);
+            </script>
             <!-- 分区遍历 -->
+            <span style="display:none;">{{$tnum=0}}</span>
             @foreach($typeList as $type)
-                <a name="{{ $type->id }}"></a>
-                <div class="inner-section part{{ $type->id }} part-animate" id="part{{ $type->id+3 }}">
+                <a name="{{ $type->id }}">
+                <div class="inner-section part{{ $tnum+1 }} part-animate" >
                     <div class="box-left">
                         <header class="part-animate-top">
-                            <h2><i></i><a href="{{ $type->link }}">{{ $type->name }}</a></h2>
-                            <!-- <span class="animation-tab active">有新动态</span>
-                            <span class="animation-tab">最新投稿</span>
-                            <span class="animation-tab">干物妹小埋异闻录！</span> -->
+                            <h2><i><img src="images/plateimg/{{ $type->typeImage }}" alt=""></i><a href="{{ $type->link }}">{{ $type->name }}</a></h2>
+
                             <div class="btn-right">
                                 <div class="btn-reset">
                                     <a href="javascript:;"></a>
@@ -219,7 +247,9 @@
                         </header>
                         <div class="video-list">
                             <ul>
-                            @foreach($list[($type->id)-1] as $v)
+
+                            <!-- 遍历分区内视频 -->
+                            @foreach($list[$tnum] as $v)
 
                                     <li>
 
@@ -249,6 +279,7 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- 遍历排行 -->
                     <aside>
                         <header class="part-animate-aside">
                             <ul>
@@ -266,7 +297,7 @@
                             <span style="display:none;">{{$num=0}}</span>
                             <div class="rank-box">
                                 <ul>
-                                    @foreach($listP[$type->id-1] as $p)
+                                    @foreach($listP[$tnum] as $p)
                                             <li>
                                                 <div class="rank">{{ $num+=1 }}</div>
 
@@ -290,7 +321,7 @@
                             <div class="rank-box">
                                 <span style="display:none;">{{$num=0}}</span>
                                 <ul>
-                                    @foreach($listP[$type->id-1] as $p)
+                                    @foreach($listP[$tnum] as $p)
                                             <li>
                                                 <div class="rank">{{ $num+=1 }}</div>
 
@@ -317,6 +348,7 @@
                         </div>
                     </aside>
                 </div>
+                <!-- 如果是番剧分区 就遍历番剧具体内容 -->
                 @if($type->name == "番剧")
                     <!--第五部分-2————番剧更新列表-->
                     <div class="part-animate-list">
@@ -342,6 +374,7 @@
                                 <div class="list-box-{{ $j }} list-box">
                                     <ul>
                                         @foreach($vList as $vlist)
+                                        <!-- 周内播放的肯定是番剧 -->
                                             @if($vlist->week == $j)
                                                 <li>
                                                     <div class="img-box">
@@ -360,13 +393,14 @@
                             @endfor
                         </div>
                         <aside>
+                        <!-- 固定推荐三部已完结番剧 -->
                             <div class="carousel-box">
                                 <ul class="carousel-panel">
                                     @foreach($vList as $vlist)
-                                        @if($vlist->top == 1)
+                                        @if($vlist->tid == $type->id && $vlist->top == 1 && $vlist->week == 0)
                                         <li class="carousel-img">
                                             <a href="{{ $vlist->link }}">
-                                                <img src="{{ $vlist->image }}" alt="">
+                                                <img src="/images/{{ $vlist->image }}" alt="">
                                             </a>
                                         </li>
                                         @endif
@@ -374,13 +408,13 @@
 
                                 </ul>
 
-                                <!-- 固定推荐三部已完结番剧 -->
+
                                 <div class="carousel-box-ctrl">
 
                                     <ul>
                                         <span style="display:none;">{{$num=1}}</span>
                                         @foreach($vList as $vlist)
-                                            @if($vlist->tid == $type->id && $vlist->week != 0 && $vlist->top == 1)
+                                            @if($vlist->tid == $type->id && $vlist->week == 0 && $vlist->top == 1)
                                                 @if($num == 1)
                                                    <li data-name="{{ $vlist->title }}" data-index="0" class="active">
                                         </li>
@@ -415,15 +449,15 @@
                                     <!--数组为空的时候遍历了一次，所以次数为4-1次-->
                                     @for($i=1;count($repeat)<=3;$i++)
                                         <span style="display:none">
-                                            {{ $sum = rand(0,count($overList[$type->id-1])-1) }}
+                                            {{ $sum = rand(0,count($overList[$tnum])-1) }}
                                         </span>
                                         @if(!in_array($sum,$repeat))
                                             <li>
                                                 <div class="preview">
-                                                    <img src="/images/{{ $overList[$type->id-1][$sum]->image }}" alt="">
+                                                    <img src="/images/{{ $overList[$tnum][$sum]->image }}" alt="">
                                                     <p>全25话</p>
                                                 </div>
-                                                <a href="javascript:;">{{ $overList[$type->id-1][$sum]->title }}</a>
+                                                <a href="javascript:;">{{ $overList[$tnum][$sum]->title }}</a>
                                                 <div style="display:none">{{ $repeat[] = $sum }}</div>
                                             </li>
                                         @endif
@@ -433,14 +467,18 @@
                         </aside>
                     </div>
                  @endif
+
+                <span style="display:none;">{{$tnum++}}</span>
+                </a>
             @endforeach
 
             <div class="sidebar">
                 <div class="sidebar-box">
                     <ul class="sidebar-list">
+                        <a class="liebiao" href="#ad" draggable="true"><li draggable="true">广告</li></a>
                     @foreach($typeList as $type)
 
-                        <a class="liebiao" href="#{{ $type->id }}"><li draggable="true" id="list{{ $type->id }}">{{ $type->name }}</li></a>
+                        <a class="liebiao" href="#{{ $type->id }}" draggable="true"><li draggable="true" id="list{{ $tnum+1 }}">{{ $type->name }}</li></a>
 
                     @endforeach
                         <li class="sort">排序</li>
@@ -531,7 +569,13 @@
         <script type="text/javascript" src="respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.dragsort-0.5.2.min.js"></script>
+
+    <script type="text/javascript">
+        $(".sidebar-list").dragsort();
+    </script>
 </body>
 
 </html>

@@ -26,11 +26,11 @@ class modelController extends Controller
         //遍历分区内视频
         foreach($typeList as $v){
             //遍历分区内视频
-            $list[] = \DB::table('wb_video')->where('wb_video.tid','=',$v->id)->limit(10)->get();
+            $list[] = \DB::table('wb_video')->where('wb_video.tid','=',$v->id)->orderby('cTime','desc')->limit(10)->get();
             //遍历分区内排行
             $listP[] = \DB::table('wb_video')->where('wb_video.tid','=',$v->id)->join('wb_userdetail','wb_userdetail.id','=','wb_video.uid')->orderby("count","desc")->limit(7)->get();
             //随机推荐的已完结番剧
-            $overList[] = \DB::table('wb_video')->where('wb_video.tid','=',$v->id)->where('week','=','0')->get();
+            $overList[] = \DB::table('wb_video')->where('wb_video.tid','=',$v->id)->where('week','=','0')->where('top','=','0')->get();
 
             //计算番剧集数
         }
@@ -53,12 +53,19 @@ class modelController extends Controller
         $arr = ['一','二','三','四','五','六','日'];
         //遍历番剧具体内容
         // $vList = \DB::table('wb_video')->wherenotNull('week')->orderby('week')->get();
-        $vList = \DB::table('wb_video')->where('week','!=','0')->orderby('week')->get();
+        // $vList = \DB::table('wb_video')->where('week','!=','0')->orderby('week')->get();
+        $vList = \DB::table('wb_video')->orderby('week')->get();
 
         //随机推荐的已完结番剧
         $repeat = array();//收集随机数
 
-        return view('index',["hotList"=>$hotList,"list"=>$list,"typeList"=>$typeList,"tList"=>$tList,"lunbo"=>$lunbo,"listP"=>$listP,"arr"=>$arr,"vList"=>$vList,"overList"=>$overList,"repeat"=>$repeat]);
+        //首页推荐遍历
+        // $pro = \DB::table('wb_video')->where('top','1')->where('wb_video.')
+
+        //首页广告遍历
+        $adList = \DB::table('wb_ad')->where('top','1')->get();
+        // dd($adList);
+        return view('index',["hotList"=>$hotList,"list"=>$list,"typeList"=>$typeList,"tList"=>$tList,"lunbo"=>$lunbo,"listP"=>$listP,"arr"=>$arr,"vList"=>$vList,"overList"=>$overList,"repeat"=>$repeat,"adList"=>$adList]);
     }
 
     /**

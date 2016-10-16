@@ -29,11 +29,11 @@ $(document).ready(function() {
     });
 
     //显示全屏遮罩与排序拖拽功能
-    $(".sort").click(function() {
+    $(".sort").mouseover(function() {
         showMainMaskAndDragTip();
     });
     //取消全屏遮罩与排序拖拽功能
-    $(".main-mask").click(function() {
+    $(".sort").mouseout(function() {
         hideMainMaskAndDragTip();
     });
 
@@ -222,25 +222,25 @@ function animationEveryDay(today) {
 }
 //拖拽功能
 // 该功能待完善
-function dragItems(ele) {
-    ele.onselectstart = function() {
-        return false;
-    };
-    ele.ondragstart = function(e) {
-        e.dataTransfer.effectAllowed = "move";
-        e.dataTransfer.setData("text", e.target.id);
-        e.dataTransfer.setDragImage(e.target, 0, 0);
-    };
-    ele.ondragover = function(e) {
-        e.preventDefault();
-        return true;
-    };
-    ele.ondrop = function(e) {
-        e.preventDefault();
-        e.dataTransfer.dropEffect = "move";
-        $(this).insertAfter('#' + e.dataTransfer.getData("text"));
-    };
-}
+// function dragItems(ele) {
+//     ele.onselectstart = function() {
+//         return false;
+//     };
+//     ele.ondragstart = function(e) {
+//         e.dataTransfer.effectAllowed = "move";
+//         e.dataTransfer.setData("text", e.target.id);
+//         e.dataTransfer.setDragImage(e.target, 0, 0);
+//     };
+//     ele.ondragover = function(e) {
+//         e.preventDefault();
+//         return true;
+//     };
+//     ele.ondrop = function(e) {
+//         e.preventDefault();
+//         e.dataTransfer.dropEffect = "move";
+//         $(this).insertAfter('#' + e.dataTransfer.getData("text"));
+//     };
+// }
 
 //根据本日是周几自动切换新番列表
 function animationEveryDayAuto() {
@@ -313,7 +313,7 @@ function showMainMaskAndDragTip() {
         opacity: '1',
         visibility: 'visible'
     });
-    $(".sidebar-list li").css('cursor', 'move');
+    // $(".sidebar-list li").css('cursor', 'move');
     var dragList = $(".sidebar-list li").not('.sort');
     dragList.each(function(index, el) {
         dragItems(el);
@@ -344,5 +344,10 @@ function resetSidebar() {
     var mainInnerWidthAndTop = document.body.clientHeight;
 
     $(".sidebar").css('left', mainInnerWidthAndLeft - 100);
-    $(".sidebar").css('top', mainInnerWidthAndTop - 450);
+    $(".sidebar").css('top', mainInnerWidthAndTop*0.3);
 }
+
+//首页搜索指针变小手
+$('#submit').hover(function(){
+    $("#submit").css('cursor', 'pointer');
+})
