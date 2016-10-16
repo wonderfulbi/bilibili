@@ -72,18 +72,10 @@ Route::group(["prefix"=>"admin","middleware"=>"myauth"],function(){
     //@auth niejunwei
     Route::get("plate","admin\plate\PlateController@index");//分区管理页面
     Route::get("addplate","admin\plate\PlateController@create"); //跳转后台分区添加页面
-    Route::delete("del/{id}","admin\plate\PlateController@destroy");//删除分区
+    // Route::get("sub","adim\plate\PlateController@");
     Route::post("aplate","admin\plate\PlateController@store"); //分区添加方法
     Route::post("sear","admin\plate\PlateController@find"); //分区页面的内容搜索
-
-    Route::get("edit/{id}","admin\plate\PlateController@edit");//跳转到分区修改表单
-
-
-    Route::get("sub/{id}","admin\plate\SubController@create");//跳转子模块添加表单
-    Route::post("addsub/{id}","admin\plate\SubController@store");//执行添加写入
-    Route::delete("delsub/{id}","admin\plate\SubController@destroy");//删除分区
-    Route::get("editsub/{id}","admin\plate\SubController@edit");//跳转到分类修改表单
-    Route::post("updatesub/{id}","admin\plate\SubController@update");//执行修改
+    Route::post("del/{id}","admin\plate\PlateController@destroy");//删除分区
 
     //视频管理
     //@auth niejunwei
@@ -101,13 +93,9 @@ Route::group(["prefix"=>"admin","middleware"=>"myauth"],function(){
     //网站配置
     //@auth niejunwei
     Route::get("configuration","admin\sysmanager\SysmanagerController@index");//网站配置
-    Route::put("configuration/{id?}","admin\sysmanager\SysmanagerController@update");//网站配置修改
-
-
-
+    Route::post("configuration/{id?}","admin\sysmanager\SysmanagerController@update");//网站配置修改
     Route::get("friendlylink","admin\sysmanager\SysmanagerController@index2");//友情链接
     Route::post("friendlylink","admin\sysmanager\SysmanagerController@index2");//友情链接
-    Route::delete("sysmanager/{id}","admin\sysmanager\SysmanagerController@destroy")//删除友情链接
 
     //用户管理
     //@auth mayajun
